@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+header {
+  height: 15vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#logo {
+  font-family: 'Bangers', cursive;
+  font-size: 40pt;
+  margin: 0;
+  text-decoration: underline;
+  color: #000;
+  float: left;
+  height: 100%;
+  width: auto;
+}
+
+nav {
+  display: block;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  height: 8vh;
+  width: 98vw;
+  background-color: #fff;
+  box-shadow: 0 5px 50px 10px #000;
+}
+
+nav div {
+  display: inline-block;
+  height: 100%;
+  width: auto;
+  float: right;
+}
+
+nav div a {
+  display: inline-block;
+  width: 100px;
+  height: 100%;
+  position: relative;
+}
+nav div a span {
+  font-family: 18pt;
+  text-decoration: none;
+  color: #000;
+  font-family: 'Montserrat';
+  font-weight: 400;
+  display: block;
+  word-wrap: normal;
+  position: absolute;
+  width: max-content;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-bottom: 2px;
+}
+nav div a span:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #000;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+nav div a span:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+#social {
+  width: 98vw;
+  height: 4vh;
+  padding: 1vh 1vw;
+  padding-bottom: 0;
+  background-color: #333333;
+  color: #ff;
+  font-family: 'Montserrat';
+  font-weight: 500;
+}
+#social a {
+  width: auto;
+  height: 100%;
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  margin: 0 5px;
+}
+#navspacer {
+  top: 0;
+  left: 0;
+  display: block;
+  height: 15vh;
+  width: 100vw;
+}
+#startimage {
+  background-image: url("../../resources/media/homepage-start-image.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: block;
+  position: relative;
+  height: 85vh;
+  width: 100vw;
+  color: #fff;
+  margin: 0;
+}
+#startimage div {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#startimage div h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 30pt;
+  text-align: center;
+  width: 100vw;
+  text-shadow: 0 0 10px #000, 0 0 10px #000, 0 0 10px #000;
+}
+#startimage small {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 8pt;
+}
+#startimage small a {
+  color: #afeeee;
+}
