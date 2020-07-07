@@ -21,7 +21,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@400;500&family=Open+Sans:wght@300;400;600&family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
 
   <!-- FontAwesome -->
-  <link href="fontawesome/css/all.css" rel="stylesheet">
+  <link href="fontawesome/css/all.min.css" rel="stylesheet">
 
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -38,10 +38,8 @@
   function onReady(callback) {
     var intervalId = window.setInterval(function() {
       if (document.getElementsByTagName('body')[0] !== undefined) {
-        window.setTimeout(function() {
-          window.clearInterval(intervalId);
-          callback.call(this)
-        }, 0)
+        window.clearInterval(intervalId);
+        callback.call(this)
       }
     }, 1000)
   }
