@@ -156,6 +156,9 @@ nav div a span:hover:after {
   width: 100vw;
   text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000;
 }
+#startimage div h1 br {
+  display: none;
+}
 #startimage div h2 {
   margin: 0;
   font-family: 'Oswald', sans-serif;
