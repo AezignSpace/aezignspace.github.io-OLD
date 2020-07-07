@@ -1,6 +1,24 @@
+#loader {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  background-color: rgb(229,239,241);
+  z-index: 200;
+  background-image: url("../../resources/media/loading.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  scroll-behavior: smooth;
 }
 
 header {
@@ -9,6 +27,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 100;
 }
 
 #logo {
@@ -98,6 +117,9 @@ nav div a span:hover:after {
   text-decoration: none;
   margin: 0 5px;
 }
+#social a:hover {
+  text-decoration: underline;
+}
 #navspacer {
   top: 0;
   left: 0;
@@ -124,11 +146,42 @@ nav div a span:hover:after {
   transform: translate(-50%, -50%);
 }
 #startimage div h1 {
+  margin: 0;
   font-family: 'Open Sans', sans-serif;
   font-size: 30pt;
   text-align: center;
   width: 100vw;
-  text-shadow: 0 0 10px #000, 0 0 10px #000, 0 0 10px #000;
+  text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000;
+}
+#startimage div h2 {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 18pt;
+  text-align: center;
+  width: 100vw;
+  text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000;
+}
+#startimage div a {
+  text-align: center;
+  display: block;
+  width: 20%;
+  height: 50px;
+  background-color: dodgerblue;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14pt;
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 5px;
+  margin: 0 42.5%;
+  margin-top: 10px;
+  line-height: 50px;
+  box-sizing: border-box;
+}
+#startimage div a:hover {
+  line-height: 46px;
+  border: 2px white solid;
 }
 #startimage small {
   position: absolute;
@@ -139,4 +192,174 @@ nav div a span:hover:after {
 }
 #startimage small a {
   color: #afeeee;
+}
+#whatwemake {
+  height: 30vh;
+  width: 100vw;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+}
+.heading {
+  display: block;
+  text-align: center;
+  width: 100vw;
+  height: 50px;
+  font-size: 30pt;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+#whatwemake div {
+  flex: 1;
+}
+.makeicon {
+  height: 50%;
+  width: 100%;
+  font-size: 40pt;
+  position: relative;
+  color: #fff;
+}
+.makeicon i {
+  background-color: darkblue;
+  border: 20px solid darkblue;
+  border-radius: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#whatwemake div h2 {
+  text-align: center;
+  width: 100%;
+  height: 15%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16pt;
+  margin: 0;
+}
+#whatwemake div p {
+  width: 80%;
+  margin: 5% 10%;
+  margin-top: 0;
+  height: 30%;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+  font-size: 12pt;
+  text-align: center;
+}
+#portfolio {
+  height: 50vh;
+  width: 100vw;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+}
+#portfolio div {
+  flex: 1;
+  background-color: #250361;
+  margin: 10px;
+  border-radius: 10px;
+}
+#portfolio div img {
+  margin: 5% 10%;
+  width: 80%;
+  height: auto;
+  border-radius: 10px;
+}
+#portfolio div h3 {
+  margin: 0;
+  width: 100%;
+  font-size: 18pt;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+#portfolio div h4 {
+  margin: 0;
+  width: 100%;
+  font-size: 12pt;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+#portfolio div a {
+  text-align: center;
+  display: block;
+  width: 50%;
+  height: 50px;
+  background-color: dodgerblue;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14pt;
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 5px;
+  margin: 0 25%;
+  margin-top: 10px;
+  line-height: 50px;
+  box-sizing: border-box;
+}
+#portfolio div a:hover {
+  line-height: 46px;
+  border: 2px white solid;
+}
+#contactus {
+  height: 50vh;
+  width: 100vw;
+  background-image: url("../../resources/media/contactus-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+#contactus small {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 8pt;
+}
+#contactus small a {
+  color: #5b17d1;
+}
+#contactus h1 {
+  position: absolute;
+  top: 120px;
+  right: 80px;
+  width: 50%;
+}
+#contactus p {
+  position: absolute;
+  top: 180px;
+  right: 80px;
+  width: 50%;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18pt;
+  font-weight: 500;
+  text-align: center;
+}
+#contactus p a {
+  color: black;
+  text-decoration: underline;
+}
+#contactus p a:hover {
+  color: #5b17d1;
+}
+footer {
+  height: 10vh;
+}
+footer nav {
+  background-color: #000;
+}
+footer nav div a span {
+  color: #fff;
+}
+footer nav div a span:after {
+  background-color: #fff;
+}
+#copyright {
+  color: #fff;
+  height: 10vh;
+  line-height: 8vh;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12pt;
+  padding-left: 10px;
 }

@@ -25,6 +25,28 @@
   <!-- Stylesheets -->
   <link rel="stylesheet" href="resources/css/index.css">
 
+  <!-- Loading screen -->
+  <script>
+  function onReady(callback) {
+    var intervalId = window.setInterval(function() {
+      if (document.getElementsByTagName('body')[0] !== undefined) {
+        setTimeout(function() {
+          window.clearInterval(intervalId);
+          callback.call(this)
+        }, 5000)
+      }
+    }, 1000)
+  }
+
+  function setVisible(selector, visible) {
+    document.querySelector(selector).style.display = visible ? 'block' : 'none';
+  }
+
+  onReady(function() {
+    setVisible('#loader', false);
+  });
+  </script>
+
 </head>
 <body>
   <div id="loader"></div>
@@ -42,10 +64,13 @@
     <nav>
       <h1 id="logo">Addesign Space</h1>
       <div>
-        <a href="index.html">
+        <a href="#navspacer">
           <span>Home</span>
         </a>
-        <a href="contact.html">
+        <a href="#portfolio">
+          <span>Portfolio</span>
+        </a>
+        <a href="#contactus">
           <span>Contact Us</span>
         </a>
       </div>
@@ -56,12 +81,68 @@
     <div>
       <h1>Welcome to Addesign Space</h1>
       <h2>The creators of websites and software solutions</h2>
-      <a href="#whatwemake">Learn More</a>
+      <a href="#whatwemakelabel">Learn More</a>
     </div>
     <small>Photo by <a href="https://unsplash.com/@markusspiske?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Markus Spiske</a> on <a href="https://unsplash.com/s/photos/programming?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></small>
   </div>
+  <h1 class="heading">What we make</h1>
   <div id="whatwemake">
-    
+    <div id="websites">
+      <div class="makeicon">
+        <i class="fas fa-globe"></i>
+      </div>
+      <h2>Websites</h2>
+      <p>
+        We make websites and blogs, tailored to your specifications.
+      </p>
+    </div>
+    <div id="software">
+      <div class="makeicon">
+        <i class="fas fa-tools"></i>
+      </div>
+      <h2>Software</h2>
+      <p>
+        We make professional software solutions and apps for you and your business.
+      </p>
+    </div>
   </div>
+  <h1 class="heading">Portfolio</h1>
+  <div id="portfolio">
+    <div style="margin-right: 5px;">
+      <img src="resources/media/adconlinehelp-screenshot.jpg">
+      <h3>ADC Online Help</h3>
+      <h4>adconlinehelp.com.au</h4>
+      <a href="https://adconlinehelp.com.au">Visit Site</a>
+    </div>
+    <div style="margin-left: 5px;">
+      <img src="resources/media/multiplexhome-screenshot.jpg">
+      <h3>Multiplex Home</h3>
+      <h4>multiplexhome.com.au</h4>
+      <a href="https://multiplexhome.com.au">Visit Site</a>
+    </div>
+  </div>
+  <div id="contactus">
+    <h1 class="heading">Contact Us</h1>
+    <p>To contact us, please email us on <a href="mailto:addesignspace@gmail.com">addesignspace@gmail.com</a>.</p>
+    <small>Photo by <a href="https://unsplash.com/@zal3wa?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Damian Zaleski</a> on <a href="https://unsplash.com/s/photos/web?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></small>
+  </div>
+  <footer>
+    <nav>
+      <span id="copyright">
+        Copyright &copy; Addesign Space <script>document.write((new Date()).getFullYear())</script>.
+      </span>
+      <div>
+        <a href="#navspacer">
+          <span>Home</span>
+        </a>
+        <a href="#portfolio">
+          <span>Portfolio</span>
+        </a>
+        <a href="#contactus">
+          <span>Contact Us</span>
+        </a>
+      </div>
+    </nav>
+  </footer>
 </body>
 </html>
