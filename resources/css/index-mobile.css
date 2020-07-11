@@ -85,7 +85,7 @@ footer nav div {
 }
 #whatwemake {
   flex-direction: column;
-  height: 60vh;
+  height: fit-content;
 }
 #startimage div a {
   width: 50%;
